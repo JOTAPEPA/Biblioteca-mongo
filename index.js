@@ -11,9 +11,7 @@ app.use("/api/holders",holders)
 app.use("/api/laptops",laptops)
 app.use("/api/entrys",entrys)
 
-app.get('/',(req,res)=>{
-    res.send('Bienvenido a la API de registro de laptops')
-})
+app.get
 
 app.listen(process.env.PORT,()=>{
     console.log(`Servidor escuchando en el puerto ${process.env.PORT}`);
