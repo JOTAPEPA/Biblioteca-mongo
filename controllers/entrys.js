@@ -32,7 +32,7 @@ const httpEntry = {
             const startOfDay = new Date(dia);
             const endOfDay = new Date(dia);
             endOfDay.setDate(endOfDay.getDate() + 1);
-            const entry = await Entrys.find({
+            const entry = await entrys.find({
                 entrytime: { $gte: startOfDay, $lt: endOfDay }
             });
             res.json({ entry })
@@ -47,7 +47,7 @@ const httpEntry = {
             const { fechaInicio, fechaFinal } = req.params
             const fecha1 = new Date(fechaInicio);
             const fecha2 = new Date(fechaFinal);
-            const entrys = await Entrys.find({
+            const entrys = await entrys.find({
                 entrytime: { $gte: fecha1, $lt: fecha2 }
             });
             res.json({ entrys })
