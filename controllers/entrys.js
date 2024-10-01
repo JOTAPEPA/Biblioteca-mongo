@@ -47,10 +47,10 @@ const httpEntry = {
             const { fechaInicio, fechaFinal } = req.params
             const fecha1 = new Date(fechaInicio);
             const fecha2 = new Date(fechaFinal);
-            const entrys = await entrys.find({
+            const entry = await entrys.find({
                 entrytime: { $gte: fecha1, $lt: fecha2 }
             });
-            res.json({ entrys })
+            res.json({ entry })
         } catch (error) {
             res.status(400).json({ error: "la  operacion no se realizo correctamente" })
             console.log(error);
