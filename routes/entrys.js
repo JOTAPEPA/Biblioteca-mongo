@@ -8,7 +8,7 @@ router.post("/", httpEntry.postInsertar)
 
 router.get("/:holder", httpEntry.getListarXholder)
 
-router.get("/:dia", httpEntry.getListarXDia)
+router.get("/fecha/:dia", httpEntry.getListarXDia)
 
 router.get("/fechas/:fechaInicio/:fechaFinal", httpEntry.getListarXFechas)
 
